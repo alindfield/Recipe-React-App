@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Confirm.css';
+import './Confirm.css';
 import Panel from '../../UI/Panel/Panel';
 import Buttons from '../Buttons/Buttons';
 
@@ -22,11 +22,11 @@ const confirm = (props) => {
     return (
         <Panel title={props.title}>
             <br />
-            <div className={classes.Row}>
-                <div className={classes.Left}>
+            <div className="confirm-row">
+                <div className="confirm-left">
                     <Buttons config={confirmConfig}/>
                 </div>
-                <div className={classes.Right}>
+                <div className="confirm-right">
                     <Buttons config={cancelConfig}/>
                 </div>
             </div>

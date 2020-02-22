@@ -1,18 +1,18 @@
-.Header {
+.confirm-header {
     text-align: center;
     text-decoration: underline;
 }
 
-.Row {
+.confirm-row {
     display: flex;
     flex-direction: row;
 }
 
-.Left {
+.confirm-left {
     left: 0;
 }
 
-.Right {
+.confirm-right {
     right: 0;
     margin-left: auto;
     margin-right: 0;

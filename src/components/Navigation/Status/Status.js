@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import classes from './Status.css';
+import './Status.css';
 import {connect} from 'react-redux';
 import * as actionCreators from '../../../store/reducers/index';
 import {startTimer, addTask} from '../../../common/timer';
@@ -104,7 +104,7 @@ class Status extends Component {
         );
 
         return (
-            <div className={classes.Status}>
+            <div className="status">
                 {modal}
                 <p>Time</p>
                 <p>{this.getDate(this.props.STT.time)}</p>

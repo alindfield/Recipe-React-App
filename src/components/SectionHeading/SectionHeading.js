@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './SectionHeading.css';
+import './SectionHeading.css';
 import Buttons from '../UI/Buttons/Buttons';
 
 const SectionHeading = (props) => {
@@ -11,11 +11,11 @@ const SectionHeading = (props) => {
             clickHandler: props.createHandler
         }
     };
-//            
+       
     return (
-        <div className={classes.SectionHeading}>
-<h2 className={classes.Heading}>{props.title}</h2>
-<div className={classes.Buttons}>
+        <div className="sectionheading">
+            <h2 className="sectionheading-heading">{props.title}</h2>
+            <div className="sectionheading-buttons">
             <Buttons config={config} /></div>
         </div>
     );

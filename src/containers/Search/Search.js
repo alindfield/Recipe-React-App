@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Criteria from '../../components/Search/Criteria/Criteria';
 import Results from '../../components/Search/Results/Results';
-import classes from './Search.css';
+import './Search.css';
 import {connect} from 'react-redux';
 import * as actionCreators from '../../store/reducers/index';
 import {Redirect} from 'react-router-dom';
@@ -76,11 +76,11 @@ class Search extends Component {
         if (this.props.recipe === null && !this.props.creating) {
             output = (
                 <Error error={this.props.error}>
-                    <div className={classes.Search}>
+                    <div className="Search">
                         <Tab selectedId={1}>
                             {tabline}
                         </Tab>
-                        <div className={classes.SearchFlex}>
+                        <div className="SearchFlex">
                             <Criteria 
                                 changeDescription={this.changeDescription}
                                 changeTitle={this.changeTitle}

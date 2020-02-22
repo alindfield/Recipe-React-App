@@ -1,4 +1,4 @@
-.Ingredient {
+.ingredient {
     position: relative;
     width: 98%;
     border: 1px solid #EEE;
@@ -9,26 +9,25 @@
     flex-direction: row;
 }
 
-.Ingredient input:read-only {
+.ingredient input:read-only {
     background-color: lightgray;
 }
 
-.Ingredient:nth-child(even) {
+.ingredient:nth-child(even) {
     background-color: lightgrey;
 }
 
-.Ingredient:nth-child(odd) {
+.ingredient:nth-child(odd) {
     background-color: lightskyblue;
 }
 
-.Ingredient:hover {
+.ingredient:hover {
     border: 1px solid red;
     background-color: blue;
     color: white;
-    /*font-weight: bold;*/
 }
 
-.Left {
+.ingredient-left {
     position: inherit;
     height: 100%;
     width: 100%;
@@ -36,11 +35,11 @@
     flex-direction: row;
 }
 
-.Quantity {
+.ingredient-quantity {
     width: 100px;
 }
 
-.Right {
+.ingredient-right {
     position: inherit;
     height: 20px;
     right: 0;
@@ -50,7 +49,7 @@
     border: 1px solid transparent;
 }
 
-.Right button {
+.ingredient-right button {
     font-weight: bold;
     font-size: 0.85em;
     text-align: center;
@@ -64,15 +63,15 @@
     transition: all 260ms;
 }
 
-.Right button:disabled {
+.ingredient-right button:disabled {
     background-color: grey;
 }
 
-.Right button:disabled:hover {
+.ingredient-right button:disabled:hover {
     background-color: lightgray;
 }
 
-.Right button:hover {
+.ingredient-right button:hover {
     cursor: pointer;
     background-color: lightgreen;
 }

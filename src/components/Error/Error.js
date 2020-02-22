@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Error.css';
+import './Error.css';
 
 const error = (props) => {
 
@@ -7,14 +7,14 @@ const error = (props) => {
     
     if (props.error !== undefined && props.error.error) {
         error = (
-            <div className={classes.Top}>
+            <div className="error-top">
                 <div>{props.error.message}</div>
                 {props.error.detail !== undefined ? <div>{props.error.detail}</div> : null}
             </div>
         );
     } else {
         /*error = (
-            <div className={classes.Top}>
+            <div className="Top">
                 <p>No Error</p>
                 <p>No error</p>
                 <br />
@@ -23,9 +23,9 @@ const error = (props) => {
     };
 
     return (
-        <div className={classes.Error}>
+        <div className="error">
             {error}
-            <div className={classes.Bottom}>
+            <div className="error-bottom">
                 {props.children}
             </div>
         </div>

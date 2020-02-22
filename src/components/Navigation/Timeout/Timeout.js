@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Timeout.css';
+import './Timeout.css';
 import {connect} from 'react-redux';
 import Buttons from '../../UI/Buttons/Buttons';
 
@@ -29,14 +29,14 @@ const timeout = (props) => {
     const detail = isNaN(props.timeToExpire()) || props.timeToExpire() === undefined || props.timeToExpire() === null ? '' : 'Your session will expire in ' + getTime(props.timeToExpire());
 
     return (
-        <div className={classes.Timeout}>
-            <div className={classes.HeaderPanel}>
-                <h2 className={classes.Header}>Timeout</h2>
+        <div className="timeout-timeout">
+            <div className="timeout-headerpanel">
+                <h2 className="timeout-header">Timeout</h2>
             </div>
-            <div className={classes.DetailPanel}>
-                <p className={classes.DetailText}>{detail}</p>
+            <div className="timeout-detailpanel">
+                <p className="DetailText">{detail}</p>
             </div>
-            <div className={classes.ButtonsPanel}>
+            <div className="timeout-buttonspanel">
                 <Buttons config={buttonsConfig}/>
             </div>
         </div>

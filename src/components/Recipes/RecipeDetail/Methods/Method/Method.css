@@ -1,4 +1,4 @@
-.Method {
+.method {
     position: relative;
     width: 98%;
     border: 1px solid #EEE;
@@ -9,26 +9,25 @@
     flex-direction: row;
 }
 
-.Method input:read-only {
+.method input:read-only {
     background-color: lightgray;
 }
 
-.Method:nth-child(even) {
+.method:nth-child(even) {
     background-color: lightgrey;
 }
 
-.Method:nth-child(odd) {
+.method:nth-child(odd) {
     background-color: lightskyblue;
 }
 
-.Method:hover {
+.method:hover {
     border: 1px solid red;
     background-color: blue;
     color: white;
-    /*font-weight: bold;*/
 }
 
-.Left {
+.method-left {
     position: inherit;
     height: 100%;
     width: 100%;
@@ -36,15 +35,15 @@
     flex-direction: row;
 }
 
-.ContentLeft {
+.method-contentleft {
     width: 30px;
 }
 
-.ContentRight {
+.method-contentright {
     width: calc(100% - 30px);
 }
 
-.Right {
+.method-right {
     position: inherit;
     height: 20px;
     right: 0;
@@ -54,7 +53,7 @@
     border: 1px solid transparent;
 }
 
-.Right button {
+.method-right button {
     font-weight: bold;
     font-size: 0.85em;
     text-align: center;
@@ -68,15 +67,15 @@
     transition: all 260ms;
 }
 
-.Right button:disabled {
+.method-right button:disabled {
     background-color: grey;
 }
 
-.Right button:disabled:hover {
+.method-right button:disabled:hover {
     background-color: lightgray;
 }
 
-.Right button:hover {
+.method-right button:hover {
     cursor: pointer;
     background-color: lightgreen;
 }

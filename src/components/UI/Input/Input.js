@@ -1,6 +1,6 @@
 import React, {memo, useReducer, useRef} from 'react';
 import ReactDOM from 'react-dom';
-import classes from './Input.css';
+import './Input.css';
 import List from '../List/List';
 
 const Input = (props) => {
@@ -41,23 +41,23 @@ const Input = (props) => {
 
     const mouseEnterHandler = (ref) => {
         const square = ReactDOM.findDOMNode(ref).getBoundingClientRect();
-        dispatch({type: 'update', posX: square.right + 10, posY: square.top - 10, visible: true, class: classes.InputToolTipOpen});
+        dispatch({type: 'update', posX: square.right + 10, posY: square.top - 10, visible: true, class: "InputToolTipOpen"});
     };
 
     const mouseLeaveHandler = () => {
-        dispatch({type: 'update', posX: state.posX, posY: state.posY, visible: false, class: classes.InputToolTipClose});
+        dispatch({type: 'update', posX: state.posX, posY: state.posY, visible: false, class: "InputToolTipClose"});
     };
 
     let inputElement = null;
-    const inputClasses = [classes.InputInput];
+    const inputClasses = ["InputInput"];
 
     let error = null;
 
     if ((props.data ? !props.data.valid : true) && (props.data ? props.data.touched : false)) {
         error = props.data.reason;
-        inputClasses.push(classes.InputInvalid);
+        inputClasses.push("InputInvalid");
     } else {
-        inputClasses.push(classes.InputValid);
+        inputClasses.push("InputValid");
     }
 
     const ref = (ref) => {
@@ -124,11 +124,11 @@ const Input = (props) => {
     }
 
     const left = "calc(" + props.labelWidth + " + 20px)";
-    const errorTag = error === null ? null: <div style={{left: left}} className={classes.InputError}>{error}</div>;
+    const errorTag = error === null ? null: <div style={{left: left}} className="InputError">{error}</div>;
 
     //const style = {left: state.posX, top: state.posY, visibility: state.visible ? "visible" : "hidden"};
     const style = {left: state.posX, top: state.posY, opacity: state.visible ? "1" : "0"};
-    const toolClasses = [classes.InputToolTip];
+    const toolClasses = ["InputToolTip"];
     
     //if (state.class !== null) toolClasses.push(state.visible ? classes.InputToolTipOpen : classes.InputToolTipClose);
     if (state.class !== null) toolClasses.push(state.class);
@@ -136,17 +136,17 @@ const Input = (props) => {
     const toolTag = props.config.tooltip === undefined || props.config.tooltip() === null ? null : <div style={style} className={toolClasses.join(' ')}>{props.config.tooltip()}</div>;
 
     return (
-        <div className={classes.Input}>
-            <div className={classes.InputRow}>
-                <div style={{width: props.labelWidth}} className={classes.InputLabel}>
+        <div className="Input">
+            <div className="InputRow">
+                <div style={{width: props.labelWidth}} className="InputLabel">
                     {props.config.label}
                 </div>
-                <div style={{width: props.inputWidth}} className={classes.InputElement}>
+                <div style={{width: props.inputWidth}} className="InputElement">
                     {inputElement}
                     {toolTag}
                 </div>                
             </div>
-            <div className={classes.InputRow}>
+            <div className="InputRow">
                 {errorTag}
             </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Results.css';
+import './Results.css';
 import Spinner from '../../UI/Spinner/Spinner';
 import Recipes from '../../Recipes/Recipes';
 
@@ -16,7 +16,7 @@ const results = (props) => {
     };
 
     return (
-        <div className={classes.Results}>
+        <div className="results">
             {output}
         </div>
     );

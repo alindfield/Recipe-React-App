@@ -1,6 +1,5 @@
 import React from 'react';
-import classes from './Criteria.css';
-//import {Form, Row, Col, Button, ButtonToolbar} from 'react-bootstrap';
+import './Criteria.css';
 import Form from '../../../containers/Form/Form';
 import Buttons from '../../UI/Buttons/Buttons';
 
@@ -48,9 +47,9 @@ const criteria = (props) => {
     };
     
     return (
-        <div className={classes.Criteria}>
+        <div className="criteria">
             <Form config={formConfig} data={props.data} labelWidth="80px" inputWidth="calc(100% - 80px)"/>
-            <div className={classes.Buttons}>
+            <div className="criteria-buttons">
                 <Buttons config={buttonConfig}/>
                 <Buttons config={buttonConfig2}/>
             </div>

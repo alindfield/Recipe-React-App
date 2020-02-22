@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Buttons.css';
+import './Buttons.css';
 
 const buttons = (props) => {
 
@@ -13,14 +13,14 @@ const buttons = (props) => {
     }
 
     return (
-        <div className={classes.Buttons}>
+        <div className="buttons">
             {buttons.map(element => {                    
                 const style = element.config.visible === undefined || element.config.visible ? {} : {"display": "none"};
                 return (
                     <button 
                         style={style}
                         key={element.id}          
-                        type="button"
+                        type="buttons-button"
                         disabled={element.config.enabled !== undefined && !element.config.enabled}
                         onClick={element.config.clickHandler} {...element.config.elementConfig}>{element.config.label}</button>
                 )

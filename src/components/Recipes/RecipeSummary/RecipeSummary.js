@@ -1,9 +1,9 @@
 import React from 'react';
-import classes from './RecipeSummary.css';
+import './RecipeSummary.css';
 import {useDispatch, useSelector} from 'react-redux';
 import * as actionCreators from '../../../store/reducers/index';
 
-const Recipe = (props) => {
+const RecipeSummary = (props) => {
 
     const ref = React.createRef();
     const dispatch = useDispatch();
@@ -18,18 +18,18 @@ const Recipe = (props) => {
     const mouseLeaveHandler = () => {
     };
     
-    const media = mediaState.medias[props.recipe.id] ? <div className={classes.Media} ref={ref}><img src={mediaState.medias[props.recipe.id]} alt=""/></div> : null;
+    const media = mediaState.medias[props.recipe.id] ? <div className="recipesummary-media" ref={ref}><img src={mediaState.medias[props.recipe.id]} alt=""/></div> : null;
 
     return (
-        <div className={classes.Recipe} onMouseEnter={() => mouseEnterHandler(props.id)} onMouseLeave={mouseLeaveHandler} onClick={() => props.clicked(props.recipe.id)}>
-            <div className={classes.Detail}>
-                <div className={classes.Field}>
-                    <input className={classes.Title} readOnly type="text" value={props.recipe.title}></input>
+        <div className="recipesummary" onMouseEnter={() => mouseEnterHandler(props.id)} onMouseLeave={mouseLeaveHandler} onClick={() => props.clicked(props.recipe.id)}>
+            <div className="recipesummary-detail">
+                <div className="recipesummary-field">
+                    <input className="recipesummary-title" readOnly type="text" value={props.recipe.title}></input>
                 </div>
                 {props.recipe.description
                     ? 
-                        <div className={classes.Field}>
-                            <textarea className={classes.Title} readOnly value={props.recipe.description}></textarea>
+                        <div className="recipesummary-field">
+                            <textarea className="recipesummary-title" readOnly value={props.recipe.description}></textarea>
                         </div>
                     :
                         null
@@ -41,4 +41,4 @@ const Recipe = (props) => {
 
 };
 
-export default Recipe;
+export default RecipeSummary;

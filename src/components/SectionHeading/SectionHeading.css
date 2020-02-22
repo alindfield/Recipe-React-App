@@ -1,10 +1,10 @@
-.SectionHeading {
+.sectionheading {
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-.Buttons {
+.sectionheading-buttons {
     position: absolute;
     top: 0;
     left: 0;
@@ -14,7 +14,7 @@
     z-index: 500;
   }
   
-  .Heading {
+  .sectionheading-heading {
     position: relative;
     left: 0;
     width: 100%;

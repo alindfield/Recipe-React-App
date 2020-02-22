@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import classes from './RecipeDetail.css';
+import './RecipeDetail.css';
 import {connect} from 'react-redux';
 import Error from '../../Error/Error';
 import {Tab, TabItem} from '../../UI/Tab/Tab';
@@ -307,22 +307,19 @@ const RecipeDetail = (props) => {
             enabled: props.RCP.datatype !== datatypes.UPDATE && props.RCP.datatype !== datatypes.INSERT,
             clickHandler: clickBackHandler
         },
-        //pdf: {
-        //    label: 'PDF'
-        //}
     };
 
     let detail = null;
 
     if (props.RCP.selectedId === 1) {
-        const media = props.MED.media ? <div className={classes.TopRightImage}><img src={props.MED.media} alt=""/></div> : null;
+        const media = props.MED.media ? <div className="recipedetail-toprightimage"><img src={props.MED.media} alt=""/></div> : null;
         detail = (
             <Auxiliary>
-                <div className={classes.Top}>
-                    <div className={classes.TopLeft}>
+                <div className="recipedetail-top">
+                    <div className="recipedetail-topleft">
                         <Form ref={ref} config={formConfig} notifyValid={notifyValidHandler} labelWidth="120px" inputWidth="calc(100% - 150px)"/>
                     </div>
-                    <div className={classes.TopRight}>{media}</div>
+                    <div className="recipedetail-topright">{media}</div>
                 </div>
             </Auxiliary>
         );
@@ -331,7 +328,7 @@ const RecipeDetail = (props) => {
     if (props.RCP.selectedId === 2) {
         detail = (
             <Auxiliary>
-                <div className={classes.Image}>
+                <div className="recipedetail-image">
                     <Media 
                         media={props.MED.media} 
                         errorHandler={errorHandler} 
@@ -348,10 +345,10 @@ const RecipeDetail = (props) => {
     if (props.RCP.selectedId === 3) {
         detail = (
             <Auxiliary>
-                <div className={classes.SubHeader}>
+                <div className="recipedetail-subheader">
                     <SectionHeading createHandler={createIngredientHandler} enabled={props.RCP.datatype === datatypes.UPDATE}/>
                 </div>
-                <div className={classes.Sub}>
+                <div className="recipedetail-sub">
                     <Ingredients 
                         ingredients={props.ING.ingredients} 
                         readonly={props.RCP.datatype !== datatypes.UPDATE && props.RCP.datatype !== datatypes.INSERT} 
@@ -366,10 +363,10 @@ const RecipeDetail = (props) => {
     if (props.RCP.selectedId === 4) {
         detail = (
             <Auxiliary>
-                <div className={classes.SubHeader}>
+                <div className="recipedetail-subheader">
                     <SectionHeading createHandler={createMethodHandler} enabled={props.RCP.datatype === datatypes.UPDATE}/>
                 </div>
-                <div className={classes.Sub}>
+                <div className="recipedetail-sub">
                     <Methods 
                         methods={props.MTD.methods}
                         readonly={props.RCP.datatype !== datatypes.UPDATE && props.RCP.datatype !== datatypes.INSERT}
@@ -422,13 +419,13 @@ const RecipeDetail = (props) => {
                     {ingredientPopupModal}
                     {methodPopupModal}
                     {confirmModal}
-                    <div className={classes.RecipeDetail}>
+                    <div className="recipedetail">
                         <Tab selectedId={props.RCP.selectedId} onClick={tabClickHandler}>
                             {tabline}
                         </Tab>
-                        <div className={classes.RecipeDetailFlex}>
+                        <div className="recipedetail-flex">
                             {detail}
-                            <div className={classes.Bottom}>
+                            <div className="recipedetail-bottom">
                                 <Buttons config={buttonsConfig}/>
                             </div>
                         </div>

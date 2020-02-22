@@ -1,14 +1,11 @@
-.Criteria {
+.criteria {
     position: relative;
-    /*display:inline-block;*/
     vertical-align: middle;
     width: 100%;
     height: 180px;
     top: 0;
-    /*border-bottom: 1px solid red;*/
-    /*border: 3px solid green;*/
 }
 
-.Buttons {
+.criteria-buttons {
     display: flex;
 }

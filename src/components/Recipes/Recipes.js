@@ -1,6 +1,6 @@
 import React from 'react'
 import RecipeSummary from './RecipeSummary/RecipeSummary';
-import classes from './Recipes.css';
+import './Recipes.css';
 
 const recipes = (props) => {
 
@@ -17,7 +17,7 @@ const recipes = (props) => {
     }
 
     return (
-        <div className={classes.Recipes}>
+        <div className="recipes">
             {output}
         </div>
     );

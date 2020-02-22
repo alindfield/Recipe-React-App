@@ -1,11 +1,11 @@
 import React from 'react';
-import classes from './Panel.css';
+import './Panel.css';
 
 const Panel = (props) => {
     return (
         <div>
             <div>
-                <h2 onMouseDown={(event) => props.mouseDown(event, props.name)} className={classes.Header}>{props.title}</h2>
+                <h2 onMouseDown={(event) => props.mouseDown(event, props.name)} className="Header">{props.title}</h2>
             </div>
             {props.children}
         </div>

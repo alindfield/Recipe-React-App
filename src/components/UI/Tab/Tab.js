@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Tab.css';
+import './Tab.css';
 
 export const Tab = (props) => {
 
@@ -9,8 +9,8 @@ export const Tab = (props) => {
 
     return (
         <div>
-            <div className={classes.Tab} />
-            <div className={classes.TabLine} >
+            <div className="Tab" />
+            <div className="TabLine" >
                 {childrenWithProps}
             </div>
         </div>
@@ -20,7 +20,7 @@ export const Tab = (props) => {
 
 export const TabItem = (props) => {
 
-    const style = props.id === props.selectedId ? classes.TabItem : classes.TabItemHidden;
+    const style = props.id === props.selectedId ? "TabItem" : "TabItemHidden";
     const click = props.id === props.selectedId ? null : () => props.onClick(props.id);
 
     return (

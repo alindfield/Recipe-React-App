@@ -1,4 +1,4 @@
-.RecipeDetail {
+.recipedetail {
     position: absolute;
     top: 10%;
     left: 15%;
@@ -13,7 +13,7 @@
     overflow-y: auto;
 }
 
-.RecipeDetailFlex {
+.recipedetail-flex {
     position: relative;
     width: 100%;
     height: calc(100% - 45px);
@@ -21,7 +21,7 @@
     flex-direction: column;
 }
 
-.Top {
+.recipedetail-top {
     position: relative;
     top: 0;
     height: 100%;
@@ -30,69 +30,68 @@
     flex-direction: row;
 }
 
-.TopLeft {
+.recipedetail-topleft {
     position: inherit;
     width: 100%;
     height: 100%;
     overflow-y: auto;
 }
 
-.TopRight {
+.recipedetail-topright {
     position: inherit;
     top: 10px;
     max-width: 30%;
 } 
 
-.Bottom {
+.recipedetail-bottom {
     position: relative;
     min-height: 50px;
     height: 50px;
 }
 
-.SubHeader {
+.recipedetail-subheader {
     position: inherit;
     top: 0;
     height: 45px;
     width: 100%;
   }
   
-.Sub {
+.recipedetail-sub {
     position: inherit;
     height: 100%;
     width: 100%;
     overflow-y: auto;
 }
 
-.Image {
+.recipedetail-image {
     position: inherit;
     height: 100%;
     width: 100%;
 }
 
-.TopRightImage {
+.recipedetail-toprightimage {
     object-fit: contain;
     object-position: top;
     border: 1px solid black;
     background-color: black;
 }
 
-.TopRightImage img {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: 0px;
-        min-height: 200px;    
+.recipedetail-toprightimage img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 0px;
+    min-height: 200px;    
 }
 
-.Full {
+.recipedetail-full {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     background-color: transparent;
-    /*z-index: -100;*/
 }

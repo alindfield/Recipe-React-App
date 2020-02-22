@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Sidebar.css';
+import './Sidebar.css';
 import Buttons from '../../UI/Buttons/Buttons';
 import Status from '../Status/Status';
 import {connect} from 'react-redux';
@@ -17,11 +17,11 @@ const sidebar = (props) => {
         }
     };
     return (
-        <div className={classes.Sidebar}>
-            <div className={classes.Session}>
+        <div className="sidebar">
+            <div className="sidebar-session">
                 <Status />
             </div>
-            <div className={classes.Buttons}>
+            <div className="sidebar-buttons">
                 <Buttons config={config} />
             </div>
         </div>

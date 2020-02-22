@@ -7,7 +7,7 @@ import Auxiliary from '../../hoc/Auxiliary';
 import {connect} from 'react-redux';
 import {setErrorAndDispatch} from '../../common/utilities';
 import * as actionCreators from '../../store/reducers/index';
-import classes from './Authenticate.css';
+import './Authenticate.css';
 
 const Authenticate = (props) => {
 
@@ -137,7 +137,7 @@ const Authenticate = (props) => {
 
     return (
         <Error error={props.ERR}>
-            <div className={classes.Authenticate}>
+            <div className="authenticate">
                 <Tab selectedId={props.AUT.selectedId} onClick={tabClickHandler}>
                     {tabline}
                 </Tab>

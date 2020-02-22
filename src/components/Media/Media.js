@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import classes from './Media.css';
+import './Media.css';
 import Files from 'react-files';
 import Buttons from '../UI/Buttons/Buttons';
 
@@ -41,15 +41,10 @@ class Media extends Component {
             }
         };
 
-        //const style = [classes.Buttons];
-        //if (!this.state.modal || (!this.props.editing && !this.props.creating)) style.push(classes.Hidden);
-//<div className={classes.Image}>         </div>
         return (
-            <div className={classes.Media} onMouseEnter={() => this.mouseEnter()} onMouseLeave={() => this.mouseLeave()}>
-                <div className={classes.Top}>
-                    
+            <div className="media" onMouseEnter={() => this.mouseEnter()} onMouseLeave={() => this.mouseLeave()}>
+                <div className="media-top">
                         <img src={this.props.media} alt=""/>
-                    
                 </div>
                 <Files 
                     clickable 
@@ -58,7 +53,7 @@ class Media extends Component {
                     onError={this.props.errorHandler}>
                     <button disabled={!this.props.editing && !this.props.creating} style={{"display": "none"}} ref={this.ref}>Upload</button>
                 </Files>
-                <div className={classes.Bottom}>
+                <div className="media-bottom">
                     <Buttons config={mediaConfig}/>
                 </div>            
             </div>
@@ -66,5 +61,5 @@ class Media extends Component {
     };
 
 };
-//className={classes.Buttons}
+//className="Buttons}
 export default Media;

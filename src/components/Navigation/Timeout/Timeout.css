@@ -1,4 +1,4 @@
-.Timeout {
+.timeout {
     position: absolute;
     top: 0;
     left: 0;
@@ -8,32 +8,32 @@
     flex-direction: column;
 }
 
-.HeaderPanel {
+.timeout-headerpanel {
     position: inherit;
     width: 100%;
     height: 75px;
 }
 
-.Header {
+.timeout-header {
     text-align: center;
     text-decoration: underline;
 }
 
-.DetailPanel {
+.timeout-detailpanel {
     top: 75px;
     position: inherit;
     bottom: 50px;
     width: 100%;
 }
 
-.DetailText {
+.timeout-detailtext {
     padding: 10px;
     text-align: center;
     font-weight: bold;
     font-size: 1.4em;
 }
 
-.ButtonsPanel {
+.timeout-buttonspanel {
     position: inherit;
     height: 50px;
     width: 100%;

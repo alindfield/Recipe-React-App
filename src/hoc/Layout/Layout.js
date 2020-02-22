@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import classes from './Layout.css';
+import './Layout.css';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import Sidebar from '../../components/Navigation/Sidebar/Sidebar';
 import {connect} from 'react-redux';
@@ -21,8 +21,8 @@ class Layout extends Component {
             <div onMouseMove={mouseMoveHandler} onMouseUp={mouseUpHandler}>
                 <Toolbar />
                 <Sidebar />
-                <main className={classes.Container}>
-                    <div className={classes.Content}>
+                <main className="layout-container">
+                    <div className="layout-content">
                         {this.props.children}
                     </div>
                 </main>

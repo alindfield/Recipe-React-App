@@ -1,4 +1,4 @@
-.Sidebar {
+.sidebar {
     position: absolute;
     height: 100%;
     left: 0;
@@ -11,7 +11,7 @@
     border-right: 1px solid black;
 }
 
-.Session {
+.sidebar-session {
     position: relative;
     width: 100%;
     height: 100%;
@@ -19,7 +19,7 @@
     bottom: 60px;
 }
 
-.Buttons {
+.sidebar-buttons {
     position: relative;
     width: 100%;
     bottom: 0;

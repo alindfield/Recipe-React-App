@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import classes from './List.css';
+import './List.css';
 
 class List extends Component {
 
@@ -71,7 +71,7 @@ class List extends Component {
 
     getClass = (id) => {
         if (this.state.selectedPosition === id) {
-            return [classes.ListDropDownHighlight];
+            return ["ListDropDownHighlight"];
         }
         return null;
     };
@@ -92,7 +92,7 @@ class List extends Component {
 
         if (this.state.visible) {
             list = (
-                <div className={classes.ListDropdown}>
+                <div className="ListDropdown">
                     {this.state.sub.map((item, index) => {
                         return (
                             <div 
@@ -109,9 +109,9 @@ class List extends Component {
         };
 
         return (
-           <div className={classes.List}>
-                <div onKeyDown={this.keyDownHandler} className={classes.ListCell}>
-                    <input type="text" onKeyDown={this.keyDownHandler} onChange={this.changeHandler} value={this.state.display} className={classes.ListInput} readOnly={this.props.readOnly}/>
+           <div className="List">
+                <div onKeyDown={this.keyDownHandler} className="ListCell">
+                    <input type="text" onKeyDown={this.keyDownHandler} onChange={this.changeHandler} value={this.state.display} className="ListInput" readOnly={this.props.readOnly}/>
                     {list}
                 </div>
            </div>

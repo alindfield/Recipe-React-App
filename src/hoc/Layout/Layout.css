@@ -1,24 +1,13 @@
-.Layout {
+/*.Layout {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     background-color: transparent;
-}
-
-/*.Content2SSS {
-    position: absolute;
-    left: 110px;
-    top: 85px;
-    bottom: 8px;
-    right: 8px;
-    background-color: lightgray;
-    border: 1px solid black;
-    border-radius: 7px;
 }*/
 
-.Container {
+.layout-container {
     position: absolute;
     left: 110px;
     top: 85px;
@@ -29,7 +18,7 @@
     border-radius: 7px;
 }
 
-.Content {
+.layout-content {
     position: absolute;
     left: 10px;
     top: 10px;

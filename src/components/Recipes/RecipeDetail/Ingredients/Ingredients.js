@@ -1,7 +1,7 @@
 import React from 'react'
 import Ingredient from './Ingredient/Ingredient';
 import {Droppable} from 'react-beautiful-dnd';
-import classes from './Ingredients.css';
+import './Ingredients.css';
 
 const ingredients = React.memo((props) => {
 
@@ -26,7 +26,7 @@ const ingredients = React.memo((props) => {
         <Droppable droppableId={"ingredients"} type="ingredient">
             {(provided) => {
                 return (
-                    <div className={classes.Ingredients} ref={provided.innerRef} {...provided.droppableProps}>
+                    <div className="ingredients" ref={provided.innerRef} {...provided.droppableProps}>
                         {output}
                         {provided.placeholder}
                     </div>
