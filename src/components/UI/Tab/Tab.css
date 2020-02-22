@@ -1,0 +1,49 @@
+.Tab {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 40px;
+    border-bottom: 1px dotted gray;
+}
+
+.TabLine {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 41px;
+    display: flex;
+    flex-direction: row;
+}
+
+.TabItem {
+    position: relative;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-radius: 5px 5px 0 0;
+    background-color: lightblue;
+    /*border-bottom-color: pink; */
+    padding: 5px;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.TabItemHidden {
+    position: relative;
+    color: grey;
+    border-top: 1px dotted transparent;
+    border-left: 1px dotted transparent;
+    border-right: 1px dotted transparent;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.TabItemHidden:hover {
+    border-top: 1px dotted gray;
+    border-left: 1px dotted gray;
+    border-right: 1px dotted gray;
+}

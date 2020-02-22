@@ -1,0 +1,19 @@
+.Header {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.Row {
+    display: flex;
+    flex-direction: row;
+}
+
+.Left {
+    left: 0;
+}
+
+.Right {
+    right: 0;
+    margin-left: auto;
+    margin-right: 0;
+}

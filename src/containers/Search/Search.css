@@ -1,0 +1,19 @@
+.Search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid gray;
+    border-radius: 7px;
+    padding: 10px;
+    background-color: lightblue;
+}
+
+.SearchFlex {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 45px);
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,82 @@
+.Method {
+    position: relative;
+    width: 98%;
+    border: 1px solid #EEE;
+    box-shadow: 0 2px 3px #CCC;
+    margin: 2px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.Method input:read-only {
+    background-color: lightgray;
+}
+
+.Method:nth-child(even) {
+    background-color: lightgrey;
+}
+
+.Method:nth-child(odd) {
+    background-color: lightskyblue;
+}
+
+.Method:hover {
+    border: 1px solid red;
+    background-color: blue;
+    color: white;
+    /*font-weight: bold;*/
+}
+
+.Left {
+    position: inherit;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.ContentLeft {
+    width: 30px;
+}
+
+.ContentRight {
+    width: calc(100% - 30px);
+}
+
+.Right {
+    position: inherit;
+    height: 20px;
+    right: 0;
+    width: 80px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid transparent;
+}
+
+.Right button {
+    font-weight: bold;
+    font-size: 0.85em;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+    border: 1px solid grey;
+    border-radius: 7px;
+    margin: 0 10px 0 0;
+    color: black;
+    background-color: green;
+    transition: all 260ms;
+}
+
+.Right button:disabled {
+    background-color: grey;
+}
+
+.Right button:disabled:hover {
+    background-color: lightgray;
+}
+
+.Right button:hover {
+    cursor: pointer;
+    background-color: lightgreen;
+}

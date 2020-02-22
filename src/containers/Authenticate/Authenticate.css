@@ -1,0 +1,11 @@
+.Authenticate {
+    position: absolute;
+    top: 150px;
+    width: 400px;
+    min-height: 100px;
+    left: calc(50% - 200px);
+    border: 2px solid gray;
+    border-radius: 7px;
+    padding: 10px;
+    background-color: lightblue;
+}

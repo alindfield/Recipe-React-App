@@ -1,0 +1,37 @@
+.Buttons {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.Buttons button {
+    height: 25px;
+    /*width: 90px;*/
+    min-width: 90px;
+    background-color: green;
+    border-radius: 8px;
+    /*box-shadow: 0 2px 3px #CCC;*/
+    box-shadow: 2px 2px 2px black;
+    border: none;
+    margin: 4px;
+    /*color: white;*/
+    transition: all 260ms;
+}
+
+.Buttons button:disabled {
+    background-color: grey;
+}
+
+.Buttons button:disabled:hover {
+    background-color: lightgray;
+}
+
+.Buttons button:hover {
+    cursor: pointer;
+    background-color: lightgreen;
+    /*font-weight: bold;*/
+    font-size: 1.15em;
+    /*color: black;
+    box-shadow: 3px 3px 2px gray;*/
+    /*margin: 6px 4px 4px 4px;*/
+}

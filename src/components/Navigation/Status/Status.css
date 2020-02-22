@@ -1,0 +1,7 @@
+.Status {
+    position: relative;
+    border: 3px solid red;
+    background-color: pink;
+    height: 300px;
+    visibility: hidden;
+}

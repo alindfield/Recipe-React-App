@@ -1,0 +1,11 @@
+.Results {
+    position: relative;
+    /*display: inline-block;*/
+    width: 100%;
+    height: 100%;
+    /*height: calc(100% -20px);*/
+    /*bottom: 0;*/
+    /*background-color: palegoldenrod;*/
+    border-top: 1px solid black;
+    overflow-y: auto;
+}
