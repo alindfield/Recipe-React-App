@@ -1,4 +1,4 @@
-.Search {
+.search {
     position: absolute;
     top: 0;
     left: 0;
@@ -10,7 +10,7 @@
     background-color: lightblue;
 }
 
-.SearchFlex {
+.search-flex {
     position: relative;
     width: 100%;
     height: calc(100% - 45px);

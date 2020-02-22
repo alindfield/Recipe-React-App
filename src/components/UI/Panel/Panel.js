@@ -5,7 +5,7 @@ const Panel = (props) => {
     return (
         <div>
             <div>
-                <h2 onMouseDown={(event) => props.mouseDown(event, props.name)} className="Header">{props.title}</h2>
+                <h2 onMouseDown={(event) => props.mouseDown(event, props.name)} className="panel-header">{props.title}</h2>
             </div>
             {props.children}
         </div>

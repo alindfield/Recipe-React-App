@@ -49,15 +49,15 @@ const Input = (props) => {
     };
 
     let inputElement = null;
-    const inputClasses = ["InputInput"];
+    const inputClasses = ["input-input"];
 
     let error = null;
 
     if ((props.data ? !props.data.valid : true) && (props.data ? props.data.touched : false)) {
         error = props.data.reason;
-        inputClasses.push("InputInvalid");
+        inputClasses.push("input-invalid");
     } else {
-        inputClasses.push("InputValid");
+        inputClasses.push("input-valid");
     }
 
     const ref = (ref) => {
@@ -124,29 +124,27 @@ const Input = (props) => {
     }
 
     const left = "calc(" + props.labelWidth + " + 20px)";
-    const errorTag = error === null ? null: <div style={{left: left}} className="InputError">{error}</div>;
+    const errorTag = error === null ? null: <div style={{left: left}} className="input-error">{error}</div>;
 
-    //const style = {left: state.posX, top: state.posY, visibility: state.visible ? "visible" : "hidden"};
     const style = {left: state.posX, top: state.posY, opacity: state.visible ? "1" : "0"};
-    const toolClasses = ["InputToolTip"];
+    const toolClasses = ["input-tooltip"];
     
-    //if (state.class !== null) toolClasses.push(state.visible ? classes.InputToolTipOpen : classes.InputToolTipClose);
     if (state.class !== null) toolClasses.push(state.class);
 
     const toolTag = props.config.tooltip === undefined || props.config.tooltip() === null ? null : <div style={style} className={toolClasses.join(' ')}>{props.config.tooltip()}</div>;
 
     return (
-        <div className="Input">
-            <div className="InputRow">
-                <div style={{width: props.labelWidth}} className="InputLabel">
+        <div className="input">
+            <div className="input-row">
+                <div style={{width: props.labelWidth}} className="input-label">
                     {props.config.label}
                 </div>
-                <div style={{width: props.inputWidth}} className="InputElement">
+                <div style={{width: props.inputWidth}} className="input-element">
                     {inputElement}
                     {toolTag}
                 </div>                
             </div>
-            <div className="InputRow">
+            <div className="input-row">
                 {errorTag}
             </div>
         </div>

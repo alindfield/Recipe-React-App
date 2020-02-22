@@ -71,7 +71,7 @@ class List extends Component {
 
     getClass = (id) => {
         if (this.state.selectedPosition === id) {
-            return ["ListDropDownHighlight"];
+            return ["list-dropdownhighlight"];
         }
         return null;
     };
@@ -92,7 +92,7 @@ class List extends Component {
 
         if (this.state.visible) {
             list = (
-                <div className="ListDropdown">
+                <div className="list-dropdown">
                     {this.state.sub.map((item, index) => {
                         return (
                             <div 
@@ -109,9 +109,9 @@ class List extends Component {
         };
 
         return (
-           <div className="List">
-                <div onKeyDown={this.keyDownHandler} className="ListCell">
-                    <input type="text" onKeyDown={this.keyDownHandler} onChange={this.changeHandler} value={this.state.display} className="ListInput" readOnly={this.props.readOnly}/>
+           <div className="list">
+                <div onKeyDown={this.keyDownHandler} className="list-cell">
+                    <input type="text" onKeyDown={this.keyDownHandler} onChange={this.changeHandler} value={this.state.display} className="list-input" readOnly={this.props.readOnly}/>
                     {list}
                 </div>
            </div>

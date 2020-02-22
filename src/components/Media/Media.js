@@ -61,5 +61,4 @@ class Media extends Component {
     };
 
 };
-//className="Buttons}
 export default Media;

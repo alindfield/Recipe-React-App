@@ -1,6 +1,6 @@
 /* See https://projects.lukehaas.me/css-loaders/ */
 
-.Loader {
+.loader {
     font-size: 10px;
     margin: 50px auto;
     text-indent: -9999em;
@@ -20,7 +20,8 @@
     -ms-transform: translateZ(0);
     transform: translateZ(0);
   }
-  .Loader:before {
+
+  .loader:before {
     width: 50%;
     height: 50%;
     background: white;
@@ -30,7 +31,8 @@
     left: 0;
     content: '';
   }
-  .Loader:after {
+
+  .loader:after {
     background: white;
     width: 75%;
     height: 75%;
@@ -43,6 +45,7 @@
     bottom: 0;
     right: 0;
   }
+  
   @-webkit-keyframes load3 {
     0% {
       -webkit-transform: rotate(0deg);

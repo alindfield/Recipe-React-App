@@ -76,11 +76,11 @@ class Search extends Component {
         if (this.props.recipe === null && !this.props.creating) {
             output = (
                 <Error error={this.props.error}>
-                    <div className="Search">
+                    <div className="search">
                         <Tab selectedId={1}>
                             {tabline}
                         </Tab>
-                        <div className="SearchFlex">
+                        <div className="search-flex">
                             <Criteria 
                                 changeDescription={this.changeDescription}
                                 changeTitle={this.changeTitle}

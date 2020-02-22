@@ -1,24 +1,24 @@
-.Input {
+.input {
     position: relative;
     padding: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.InputRow {
+.input-row {
     position: relative;
     display: flex;
     flex-direction: row;
 }
 
-.InputLabel {
+.input-label {
     position: relative; 
     left: 0;
     margin: 0 10px 0 0 ;
     padding: 6px;
 }
 
-.InputElement {
+.input-element {
     position: relative; 
     background-color: white;
     width: 100%;
@@ -26,7 +26,7 @@
     flex-direction: column;
 }
 
-.InputInput {
+.input-input {
     position: relative;
     width: 100%;
     height: 100%;
@@ -35,7 +35,7 @@
     border: none;
 }
 
-.InputError {
+.input-error {
     position: relative;
     left: 0px;
     top: 5px;
@@ -47,13 +47,12 @@
     color: white;
     background: red;
     margin: 5px;
-    /*border: 4px solid rgb(255, 255, 255);*/
     border-radius: 5px;
     text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
     box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 0px;
 }
 
-.InputError::after {
+.input-error::after {
     content: "";
     position: absolute;
     width: 0;
@@ -65,15 +64,15 @@
     left: 10px;
 }
 
-.InputValid {
+.input-valid {
     border: 1px solid black;
 }
 
-.InputInvalid {
+.input-invalid {
     border: 1px solid red;
 }
 
-.InputToolTip {
+.input-tooltip {
     position: fixed;
     transition: opacity 300ms ease-out;
     max-width: 400px;
@@ -92,11 +91,11 @@
     z-index: 20;
 }
 
-.InputToolTipOpen {
+.input-tooltipopen {
     animation: openModal 0.4s ease-out forwards;
 }
 
-.InputToolTipClose {
+.input-tooltipclose {
     animation: closeModal 0.4s ease-out forwards;
 }
 
@@ -158,7 +157,7 @@
     }
 }*/
 
-.InputToolTip::before {
+.input-tooltip::before {
     content: "";
     position: absolute;
     width: 0;
@@ -170,7 +169,7 @@
     left: -14px;
 }
 
-.InputToolTip::after {
+.input-tooltip::after {
     content: "";
     position: absolute;
     width: 0;
@@ -182,17 +181,17 @@
     left: -12px;
 }
 
-.InputInput:read-only {
+.input-input:read-only {
     outline: none;
     background-color: lightgray
 }
 
-.InputInput:read-only:focus {
+.input-input:read-only:focus {
     outline: none;
     background-color: lightgray;
 }
 
-.InputInput:focus {
+.input-input:focus {
     outline: none;
     background-color: lightgreen;
 }

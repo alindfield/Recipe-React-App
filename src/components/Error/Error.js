@@ -12,14 +12,6 @@ const error = (props) => {
                 {props.error.detail !== undefined ? <div>{props.error.detail}</div> : null}
             </div>
         );
-    } else {
-        /*error = (
-            <div className="Top">
-                <p>No Error</p>
-                <p>No error</p>
-                <br />
-            </div>
-        );*/
     };
 
     return (

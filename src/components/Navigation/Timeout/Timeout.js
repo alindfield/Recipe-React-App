@@ -34,7 +34,7 @@ const timeout = (props) => {
                 <h2 className="timeout-header">Timeout</h2>
             </div>
             <div className="timeout-detailpanel">
-                <p className="DetailText">{detail}</p>
+                <p className="timeout-detailtext">{detail}</p>
             </div>
             <div className="timeout-buttonspanel">
                 <Buttons config={buttonsConfig}/>

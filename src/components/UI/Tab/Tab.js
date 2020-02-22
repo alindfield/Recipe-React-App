@@ -9,8 +9,8 @@ export const Tab = (props) => {
 
     return (
         <div>
-            <div className="Tab" />
-            <div className="TabLine" >
+            <div className="tab" />
+            <div className="tab-line" >
                 {childrenWithProps}
             </div>
         </div>
@@ -20,7 +20,7 @@ export const Tab = (props) => {
 
 export const TabItem = (props) => {
 
-    const style = props.id === props.selectedId ? "TabItem" : "TabItemHidden";
+    const style = props.id === props.selectedId ? "tab-item" : "tab-item-hidden";
     const click = props.id === props.selectedId ? null : () => props.onClick(props.id);
 
     return (
