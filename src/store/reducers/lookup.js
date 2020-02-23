@@ -8,14 +8,11 @@ const initialState = {
 }
 
 const start = (state) => {
-    return updateObject(state, {loading: true});
+    return updateObject(state, {units: {list: null, loading: true}});
 };
 
 const success = (state, action) => {
-    if (action.units !== undefined && action.units !== null) {
-        return updateObject(state, {units : {list: action.units, loading: false}});
-    }
-    return state;
+    return updateObject(state, {units : {list: action.units, loading: false}});
 };
 
 const fail = (state) => {

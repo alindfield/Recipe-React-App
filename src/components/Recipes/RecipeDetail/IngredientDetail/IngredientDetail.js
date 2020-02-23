@@ -10,7 +10,7 @@ import * as actionCreators from '../../../../store/reducers/index';
 const IngredientDetail = (props) => {
 
     useEffect(() => {
-        if (props.LKP.units === null && !props.LKP.units.loading) {
+        if (props.LKP.units.loading === undefined || (!props.LKP.units.loading && props.LKP.units === null)) {
             props.onGetUnits();
         }
     });
