@@ -41,11 +41,11 @@ const Input = (props) => {
 
     const mouseEnterHandler = (ref) => {
         const square = ReactDOM.findDOMNode(ref).getBoundingClientRect();
-        dispatch({type: 'update', posX: square.right + 10, posY: square.top - 10, visible: true, class: "InputToolTipOpen"});
+        dispatch({type: 'update', posX: square.right + 10, posY: square.top - 10, visible: true, class: "input-tooltipopen"});
     };
 
     const mouseLeaveHandler = () => {
-        dispatch({type: 'update', posX: state.posX, posY: state.posY, visible: false, class: "InputToolTipClose"});
+        dispatch({type: 'update', posX: state.posX, posY: state.posY, visible: false, class: "input-tooltipclose"});
     };
 
     let inputElement = null;
