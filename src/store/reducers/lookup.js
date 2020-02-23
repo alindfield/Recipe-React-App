@@ -4,22 +4,22 @@ import {callAPI} from '../common';
 import * as types from '../types';
 
 const initialState = {
-    units: null
+    units: {}
 }
 
 const start = (state) => {
-    return state;
+    return updateObject(state, {loading: true});
 };
 
 const success = (state, action) => {
     if (action.units !== undefined && action.units !== null) {
-        return updateObject(state, {units : action.units});
+        return updateObject(state, {units : {list: action.units, loading: false}});
     }
     return state;
 };
 
 const fail = (state) => {
-    return state;
+    return updateObject(state, {});
 };
 
 const reducer = (state = initialState, action) => {

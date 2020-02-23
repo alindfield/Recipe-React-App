@@ -10,20 +10,13 @@ import * as actionCreators from '../../../../store/reducers/index';
 const IngredientDetail = (props) => {
 
     useEffect(() => {
-        if (props.LKP.units === null) {
+        if (props.LKP.units === null && !props.LKP.units.loading) {
             props.onGetUnits();
         }
     });
 
     const changeHandler = (id, value) => {
         props.onChangeIngredient(id, value);
-    };
-
-    const options = [];
-    if (props.LKP.units !== undefined && props.LKP.units !== null) {
-        for(let key in props.LKP.units) {
-            options.push({id: props.LKP.units[key].id, display: props.LKP.units[key].description});
-        };
     };
 
     let type = "";
@@ -117,7 +110,7 @@ const IngredientDetail = (props) => {
         unit: {
             elementType: 'list',
             elementConfig: {
-                items: props.LKP.units,
+                items: props.LKP.units.list,
                 selectHandler: selectHandler,
                 getId: (item) => {return item.id},
                 getLabel: (item) => {return item.description},

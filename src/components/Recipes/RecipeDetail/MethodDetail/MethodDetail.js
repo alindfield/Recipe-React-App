@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import datatypes from '../../../../common/datatypes';
 import Form from '../../../../containers/Form/Form';
 import Buttons from '../../../UI/Buttons/Buttons';
@@ -9,21 +9,8 @@ import * as actionCreators from '../../../../store/reducers/index';
 
 const MethodDetail = (props) => {
 
-    useEffect(() => {
-        if (props.LKP.units === null) {
-            props.onGetUnits();
-        }
-    });
-
     const changeHandler = (id, value) => {
         props.onChangeMethod(id, value);
-    };
-
-    const options = [];
-    if (props.LKP.units !== undefined && props.LKP.units !== null) {
-        for(let key in props.LKP.units) {
-            options.push({id: props.LKP.units[key].id, display: props.LKP.units[key].description});
-        };
     };
 
     let type = "";
@@ -152,7 +139,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onGetUnits: () => dispatch(actionCreators.getUnits()),
         onChangeMethod: (key, value) => setErrorAndDispatch(dispatch, () => actionCreators.changeMethod(key, value)),
         onSaveMethod: (recipeId, method, mode) => setErrorAndDispatch(dispatch, () => actionCreators.saveMethod(recipeId, method, mode)),
         onCancelEditMethod: () => setErrorAndDispatch(dispatch, actionCreators.cancelEditMethod),

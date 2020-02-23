@@ -54,19 +54,6 @@ const Authenticate = (props) => {
         };
     };
 
-    /*const selectHandler = (selectedId) => {
-        console.log(selectedId);
-    };
-
-    const units = [
-        {"type":"unit","id":3,"code":"cl","description":"Centilitre","unitCategory":"Volume","unitType":"Metric"},
-        {"type":"unit","id":6,"code":"g","description":"Gramme","unitCategory":"Weight","unitType":"Metric"},
-        {"type":"unit","id":1,"code":"l","description":"Litre","unitCategory":"Volume","unitType":"Metric"},
-        {"type":"unit","id":2,"code":"ml","description":"Millilitre","unitCategory":"Volume","unitType":"Metric"},
-        {"type":"unit","id":5,"code":"tbsp","description":"Tablespoon","unitCategory":"Volume","unitType":"Imperial"},
-        {"type":"unit","id":4,"code":"tsp","description":"Teaspoon","unitCategory":"Volume","unitType":"Imperial"}
-    ];*/
-
     const formsConfig = {
         userId: {
             elementType: 'input',
@@ -103,17 +90,7 @@ const Authenticate = (props) => {
             },
             label: 'Password',
             changeHandler: changeHandler
-        },
-        /*lookup: {
-            elementType: 'list',
-            elementConfig: {
-                items: units,
-                selectHandler: selectHandler,
-                getId: (item) => {return item.id},
-                getLabel: (item) => {return item.description}
-            },
-            label: 'Unit',
-        },*/
+        }
     };
     
     const buttonConfig = {
